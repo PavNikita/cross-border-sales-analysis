@@ -171,14 +171,36 @@ This dashboard helps answer questions such as:
 - Which weekdays generate the highest average revenue?
 - How do seasonal changes influence export performance?
 
+### Key DAX Measures Examples
+
+To calculate business performance metrics accurately, the following DAX measures were implemented:
+
+**Net Revenue:**
+Net_Revenue = CALCULATE(
+    [Total_Revenue],
+    'Final_OnlineRetail'[Quantity] > 0,
+    'Final_OnlineRetail'[UnitPrice] > 0,
+    NOT('Final_OnlineRetail'[StockCode] IN {"POST", "DOT", "M", "BANK CHARGES"})
+)
+
+**Average Cross-Sell Check:**
+Avg_Check_(Cross) = 
+CALCULATE(
+    DIVIDE(
+        [Net_Revenue], 
+        DISTINCTCOUNT('Final_OnlineRetail'[InvoiceNo])
+    ),
+    'Final_OnlineRetail'[Country] <> "United Kingdom",
+    'Final_OnlineRetail'[Quantity] > 0
+)
 
 # Key Analytical Insights
 
 The analysis revealed several important business observations:
 
 - International revenue is highly concentrated in several European countries.
-- The Netherlands, EIRE, Germany and France represent the largest export markets.
-- Export performance demonstrates clear monthly fluctuations throughout the year.
+- The Netherlands and EIRE dominate international sales, generating **$284K** and **$262K** in Net Revenue respectively.
+- Monthly sales show strong cyclical fluctuations, peaking in October 2011 at **$191K** and experiencing a sharp seasonal drop in April down to **$49K**.
 - Higher geographical diversification is generally associated with increased daily revenue.
 - Revenue differs across weekdays, indicating possible operational and customer behavior patterns.
 - Interactive filtering enables flexible exploration of seasonal effects and export activity.
