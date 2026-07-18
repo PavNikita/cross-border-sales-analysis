@@ -92,7 +92,7 @@ This page investigates relationships between export activity and business perfor
 
 It includes:
 
-- Scatter plot correlation analysis
+- Scatter plot with exploratory relationship analysis
 - Revenue by weekday
 - Interactive month filter
 - Interactive weekday filter
@@ -216,7 +216,7 @@ This project demonstrates practical experience with:
 - Interactive dashboard development;
 - Business KPI design;
 - Geographic data visualization;
-- Correlation analysis;
+- Exploratory relationship analysis;
 - Dashboard design based on IBCS-inspired principles;
 - Business-oriented data storytelling.
 
@@ -248,7 +248,7 @@ Possible future enhancements include:
 - DAX-based KPI calculations
 - Business Intelligence reporting
 - Geographical sales analysis
-- Correlation analysis
+- Exploratory relationship analysis
 - Professional dashboard design
 - IBCS-inspired visualization principles
 
