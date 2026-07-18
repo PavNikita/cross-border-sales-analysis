@@ -2,9 +2,9 @@
 
 ## Project Overview
 
-This project presents an analytical dashboard built in **Microsoft Power BI** for exploring cross-border e-commerce sales using the **Online Retail** dataset.
+This project presents an interactive **Power BI** analytical solution for exploring cross-border e-commerce sales using the **Online Retail** transactional dataset.
 
-The objective of the project is to identify geographical sales patterns, evaluate export performance, analyze customer purchasing behavior, and investigate factors affecting international revenue.
+The objective of the project is to identify geographical sales patterns, evaluate export performance, analyze international sales and purchasing patterns, and investigate factors affecting international revenue.
 
 The dashboard was designed following business intelligence and data visualization best practices, including principles inspired by the **IBCS (International Business Communication Standards)** to improve readability, consistency, and decision-making.
 
@@ -72,9 +72,9 @@ For the purposes of this project, the dataset was cleaned and transformed in **P
 - Scatter Plot Analysis
 
 ### Design
-Business Intelligence reporting principles
-IBCS-inspired visualization principles
-Data storytelling
+- Business Intelligence reporting principles
+- IBCS-inspired visualization principles
+- Data storytelling
 
 ## Analytical Workflow
 
@@ -94,7 +94,7 @@ DAX Measures & KPI Calculation
 Interactive Dashboard Development
         ↓
 Analytical Findings
-
+```
 
 ## Dashboard Preview
 
@@ -142,6 +142,7 @@ It includes:
 The dashboard calculates several business metrics.
 
 **| KPI | Description |**
+|---|---|
 | Net Revenue | Total international revenue |
 | Export | Gross export value |
 | Net Export | Export excluding returns |
@@ -201,7 +202,7 @@ The dashboard supports strategic decisions by allowing users to:
 
 The **Sales Factors** dashboard explores relationships between export activity and sales performance.
 
-It combines interactive filtering with statistical visualization to investigate possible business patterns.
+It combines interactive filtering with exploratory analysis to investigate possible business patterns.
 
 ### Business Value
 
@@ -218,14 +219,17 @@ The analysis is exploratory and is intended to identify patterns and relationshi
 To calculate business performance metrics accurately, the following DAX measures were implemented:
 
 **Net Revenue:**
-Net_Revenue = CALCULATE(
+```DAX
+Net_Revenue =
+CALCULATE(
     [Total_Revenue],
     'Final_OnlineRetail'[Quantity] > 0,
     'Final_OnlineRetail'[UnitPrice] > 0,
     NOT('Final_OnlineRetail'[StockCode] IN {"POST", "DOT", "M", "BANK CHARGES"})
 )
-
+```
 **Average Cross-Sell Check:**
+```DAX
 Avg_Check_(Cross) = 
 CALCULATE(
     DIVIDE(
@@ -235,7 +239,7 @@ CALCULATE(
     'Final_OnlineRetail'[Country] <> "United Kingdom",
     'Final_OnlineRetail'[Quantity] > 0
 )
-
+```
 # Key Analytical Findings
 
 The analysis revealed several important business observations:
