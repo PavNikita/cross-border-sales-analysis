@@ -10,26 +10,32 @@ The dashboard was designed following business intelligence and data visualizatio
 
 ## Business Problem
 
-Cross-border e-commerce has become one of the fastest-growing segments of international trade. Companies selling products worldwide need to understand:
+Companies operating in international e-commerce need to understand not only how much they sell, but also **where, when, and under what conditions** their international sales generate the strongest results.
 
-- Which countries generate the highest revenue;
-- How export activity changes over time;
-- What factors influence international sales;
-- Which markets demonstrate the highest business potential.
+The project addresses the following business questions:
 
-This dashboard provides an interactive analytical solution for answering these business questions.
+- Which countries generate the highest international revenue?
+- How is cross-border sales performance distributed geographically?
+- How does international revenue change over time?
+- Are there noticeable seasonal patterns in export activity?
+- How does the number of international markets relate to revenue performance?
+- Which markets demonstrate the strongest potential for further expansion?
+
+The resulting Power BI dashboard provides an interactive analytical environment for exploring these questions.
 
 ## Objectives
 
 The project aims to:
 
 - Analyze international sales performance;
-- Explore the geographical distribution of revenue;
+- Prepare and transform raw transactional data for analysis;
+- Develop key business performance indicators using DAX;
+- Explore the geographical distribution of international revenue;
 - Identify leading export markets;
-- Investigate monthly sales dynamics;
-- Analyze relationships between export geography and revenue;
-- Calculate and visualize key business indicators;
-- Build an interactive dashboard for business decision support.
+- Analyze monthly and weekday sales dynamics;
+- Investigate the relationship between export geography and revenue;
+- Build an interactive Power BI dashboard;
+- Translate analytical findings into business-oriented conclusions and recommendations.
 
 ## Dataset
 
@@ -37,24 +43,58 @@ Online Retail Dataset (UCI Machine Learning Repository / Kaggle)
 
 **Dataset characteristics**
 
-- Transactions of a UK-based online retailer
-- Period: December 2010 – December 2011
-- More than 500,000 sales records
-- Customers from dozens of countries
-- Sales, quantity, invoice, customer and product information
+- Initial dataset size: 541,909 transaction records;
+- UK-based online retailer;
+- Transactional sales data;
+- Customer and product information;
+- Invoice-level information;
+- Quantity and unit price data;
+- Customers from multiple countries;
+- Time period: December 2010 - December 2011.
 
 For the purposes of this project, the dataset was cleaned and transformed in **Power Query** before being analyzed in **Power BI**.
 
 ## Tools & Technologies
 
-- Microsoft Power BI
+### Data Preparation
 - Power Query
+
+### Data Analysis & Modeling
+- Microsoft Power BI
 - DAX
 - Data Modeling
-- Interactive Dashboards
-- Business Intelligence
-- Data Visualization
-- IBCS-inspired dashboard design
+
+### Visualization
+- Interactive Power BI Dashboards
+- KPI Cards
+- Time-Series Analysis
+- Geographic Visualization
+- Scatter Plot Analysis
+
+### Design
+Business Intelligence reporting principles
+IBCS-inspired visualization principles
+Data storytelling
+
+## Analytical Workflow
+
+The project follows the following analytical workflow:
+
+```text
+Raw Transactional Data
+        ↓
+Data Cleaning & Preparation
+        ↓
+Power Query Transformation
+        ↓
+Power BI Data Model
+        ↓
+DAX Measures & KPI Calculation
+        ↓
+Interactive Dashboard Development
+        ↓
+Analytical Findings
+
 
 ## Dashboard Preview
 
@@ -167,9 +207,11 @@ It combines interactive filtering with statistical visualization to investigate 
 
 This dashboard helps answer questions such as:
 
-- Does selling to more countries increase revenue?
+- Is higher geographical diversification associated with higher revenue?
 - Which weekdays generate the highest average revenue?
 - How do seasonal changes influence export performance?
+
+The analysis is exploratory and is intended to identify patterns and relationships that may require further statistical investigation.
 
 ### Key DAX Measures Examples
 
@@ -194,7 +236,7 @@ CALCULATE(
     'Final_OnlineRetail'[Quantity] > 0
 )
 
-# Key Analytical Insights
+# Key Analytical Findings
 
 The analysis revealed several important business observations:
 
@@ -205,20 +247,50 @@ The analysis revealed several important business observations:
 - Revenue differs across weekdays, indicating possible operational and customer behavior patterns.
 - Interactive filtering enables flexible exploration of seasonal effects and export activity.
 
+# Business Implications
+
+Based on the analytical findings:
+
+## Strengthen key international markets
+
+The strongest international markets should receive focused attention in marketing, customer retention, and logistics strategies.
+
+## Reduce geographic concentration risk
+
+The concentration of international revenue in a limited number of countries may create dependency on specific markets.
+
+Expanding into additional markets could potentially improve geographic diversification and reduce concentration risk.
+
+## Consider seasonality in planning
+
+The observed monthly fluctuations suggest that inventory, marketing, and logistics planning should account for seasonal changes in international demand.
+
+## Investigate market expansion opportunities
+
+Countries with existing sales activity but lower revenue contribution could be analyzed further to identify opportunities for targeted growth.
+
+## Further investigate geographic diversification
+
+The observed relationship between the number of markets and revenue may justify additional research into whether expanding the international customer base can contribute to sustainable revenue growth.
+
 
 # Skills Demonstrated
 
 This project demonstrates practical experience with:
 
-- Data cleaning using Power Query;
-- Data modeling in Power BI;
-- DAX measures and calculated metrics;
-- Interactive dashboard development;
-- Business KPI design;
-- Geographic data visualization;
+- Data cleaning and preparation using Power Query;
+- Working with large transactional datasets;
+- Power BI dashboard development;
+- DAX measure creation;
+- KPI design and calculation;
+- Data visualization;
+- Geographic sales analysis;
+- Time-series and seasonal analysis;
 - Exploratory relationship analysis;
-- Dashboard design based on IBCS-inspired principles;
-- Business-oriented data storytelling.
+- Interactive filtering and dashboard navigation;
+- Business-oriented data storytelling;
+- IBCS-inspired dashboard design principles;
+- Translating analytical findings into business implications.
 
 
 # How to Use
@@ -228,7 +300,7 @@ This project demonstrates practical experience with:
 3. Refresh the data if necessary.
 4. Navigate through the three dashboard pages.
 5. Use slicers to interact with the visualizations.
-
+**Note:** The original dataset is not included in this repository. The project is provided primarily as a portfolio demonstration of the Power BI analytical workflow and dashboard development process.
 
 # Future Improvements
 
@@ -243,14 +315,15 @@ Possible future enhancements include:
 
 # Project Highlights
 
-- Interactive Power BI dashboards
-- Data transformation using Power Query
-- DAX-based KPI calculations
-- Business Intelligence reporting
-- Geographical sales analysis
-- Exploratory relationship analysis
-- Professional dashboard design
-- IBCS-inspired visualization principles
+- 541K+ initial transaction records;
+- 397K+ records in the final analytical dataset;
+- End-to-end data preparation using Power Query;
+- Custom DAX-based KPI calculations;
+- Three interactive Power BI dashboard pages;
+- Geographic and seasonal sales analysis;
+- Exploratory analysis of international sales relationships;
+- Business-oriented analytical conclusions;
+- IBCS-inspired visualization principles.
 
 
 # Repository Contents
@@ -270,6 +343,8 @@ My interests include:
 
 - Business Intelligence
 - Data Analytics
+- Power Query
+- DAX
 - Power BI
 - SQL
 - Excel
@@ -277,6 +352,7 @@ My interests include:
 - Dashboard Design
 
 I am currently seeking opportunities as a **Junior Data Analyst / BI Analyst**, where I can apply analytical thinking, data visualization, and business intelligence skills to solve real-world business problems.
+My main interests include transforming raw data into actionable insights, developing BI dashboards, and analyzing business performance.
 
 
 ## Contact
