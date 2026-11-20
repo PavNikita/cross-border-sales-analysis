@@ -245,8 +245,8 @@ CALCULATE(
 The analysis revealed several important business observations:
 
 - International revenue is highly concentrated in several European countries.
-- The Netherlands and EIRE dominate international sales, generating **€284K** and **€262K** in Net Revenue respectively.
-- Monthly sales show strong cyclical fluctuations, peaking in October 2011 at **€191K** and experiencing a sharp seasonal drop in April down to **€49K**.
+- The Netherlands and EIRE dominate international sales, generating **$284K** and **$262K** in Net Revenue respectively.
+- Monthly sales show strong cyclical fluctuations, peaking in October 2011 at **$191K** and experiencing a sharp seasonal drop in April down to **$49K**.
 - Higher geographical diversification is generally associated with increased daily revenue.
 - Revenue differs across weekdays, indicating possible operational and customer behavior patterns.
 - Interactive filtering enables flexible exploration of seasonal effects and export activity.
